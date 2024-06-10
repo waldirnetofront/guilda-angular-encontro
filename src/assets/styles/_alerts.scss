@@ -1,0 +1,20 @@
+.alert-base {
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color-white);
+}
+
+.alert-warning {
+  @extend .alert-base;
+  background-color: var(--color-yellow);
+}
+
+.alert-error {
+  @extend .alert-base;
+  background-color: var(--color-red);
+}
+
+.alert-success {
+  @extend .alert-base;
+  background-color: var(--color-green);
+}

@@ -1,0 +1,31 @@
+
+$colors-element: red, green, blue, yellow, purple;
+@each $cor in $colors-element {
+  .element-#{$cor} {
+    background-color: $cor;
+    padding: 120px;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    font-weight: bold;
+  }
+}
+
+
+
+
+$i: 1;
+
+@while $i <= 10 {
+  .item-#{$i} {
+    padding: 10px;
+    margin-bottom: 10px;
+    
+    @if $i <= 5 {
+      background-color: var(--color-yellow); // Destaque para os primeiros cinco itens
+    } @else {
+      background-color: var(--color-green); // Restante dos itens
+    }
+  }
+  
+  $i: $i + 1;
+}

@@ -1,0 +1,7 @@
+.button-primary {
+    @include button-base('primary');
+}
+
+.button-secondary {
+    @include button-base('secondary', var(--button-background-secondary));
+}

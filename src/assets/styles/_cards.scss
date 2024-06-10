@@ -1,0 +1,15 @@
+$colors: #ff6347, #4682b4, #32cd32, #ffd700, #8a2be2;
+.card {
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+@for $i from 1 through 5 {
+  .card:nth-last-child(#{$i}) {
+    width: 200px - ($i * 20px); // Diminui o tamanho a cada iteração
+    background-color: nth(
+      $colors,
+      $i
+    ); // Seleciona a cor correspondente à iteração
+  }
+}
